@@ -81,25 +81,19 @@ body {
 .hero {
   height: 50vh;
   width: 100%;
-  background: url('../assets/aviaoinicio.jpg') center/cover no-repeat;
-  position: relative; 
+  background: url('../assets/aviaoinicio.jpg') top/cover no-repeat;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .hero h1 {
-  position: absolute;
-
-  left: 50%;     
-  transform: translateX(-50%); 
-  bottom: 20px;         
-
+  margin-bottom: 20px;         
   color: #244c73;
   font-size: 23px;
-
   background: rgba(255,255,255,0.7);
   padding: 20px;
-  max-width: 670px;
-
-  opacity: 0;
+  max-width: 80%;
   animation: aparecer 1.2s ease forwards;
 }
 @keyframes aparecer {
@@ -116,9 +110,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
+  flex-direction: row;
   padding: 60px 80px;
   background: white;
+}
+
+@media (max-width: 992px) {
+  .voar {
+    flex-direction: column-reverse;
+  }
 }
 
 .voar-texto {
@@ -154,6 +154,35 @@ body {
   transform: translateX(5px);
 }
 
+@media (max-width: 1250px) {
+  .voar-texto h2 {
+    font-size: 24px;
+  }
+
+  .voar-texto p, .voar-texto ul, .voar-texto li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px) {
+  .voar-texto {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .voar-texto h2 {
+    font-size: 56px;
+  }
+
+  .voar-texto p, .voar-texto ul, .voar-texto li {
+    font-size: 32px;
+  }
+
+  .voar-texto a {
+    align-self: center;
+  }
+}
+
 .btn-whatsapp {
   display: inline-block;
   background: #25D366;
@@ -171,9 +200,16 @@ body {
 }
 
 .voar-img {
-  width: 50%;
+  width: 583px;
+  height: 380px;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .voar-img {
+    margin-bottom: 5vh;
+  }
 }
 
 .voar-img img {

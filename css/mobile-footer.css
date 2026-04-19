@@ -1,0 +1,13 @@
+.footer-texts {
+    flex-direction: row;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5vw;
+}
+
+@media (max-width: 992px) {
+  .footer-texts {
+    flex-direction: column-reverse;
+  }
+}

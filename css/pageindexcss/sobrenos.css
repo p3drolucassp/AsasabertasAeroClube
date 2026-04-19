@@ -339,3 +339,26 @@ body {
   font-size: 13px;
   color: #222;
 }
+
+
+@media (max-width: 992px) {
+  .voar-conteudo {
+    grid-template-columns: 1fr;
+  }
+
+  .voar-coluna p {
+    font-size: 32px;
+  }
+
+  .voar-rodape {
+    font-size: 24px;
+  }
+
+  .voar-secao h3 {
+    font-size: 28px;
+  }
+
+  .voar-secao p, .voar-lista li {
+    font-size: 24px;
+  }
+}
